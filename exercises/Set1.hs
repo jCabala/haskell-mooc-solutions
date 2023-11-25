@@ -56,7 +56,7 @@ quadruple x = double (double x)
 --   distance 1 1 4 5  ==>  5.0
 distance :: Double -> Double -> Double -> Double -> Double
 distance x1 y1 x2 y2= 
-        sqrt ((deltaX * deltaX) + (deltaY * deltaY))
+        sqrt (deltaX * deltaX + deltaY * deltaY)
     where
         deltaX = abs (x1 - x2) 
         deltaY = abs (y1 - y2)
