@@ -91,9 +91,8 @@ isPalindrome str = reverse str == str
 palindromify :: String -> String
 palindromify s
     | isPalindrome s = s
-    | otherwise      = palindromify poppedS
+    | otherwise      = palindromify (drop 1 s2)
     where
-        poppedS = drop 1 s2
         (s2, _) = splitAt (length s - 1) s
 
 ------------------------------------------------------------------------------
